@@ -1,0 +1,83 @@
+{{>loggedIn}}
+<link rel="stylesheet" href="../css/modal.css">
+
+<section>
+  <div class="row">
+   <div>
+      <h2 class="ui huge header left aligned">{{title}}</h2>
+      
+        <h2 class="ui header">
+      <img src="/assets/avatars/{{user.avatar}}" class="ui circular image">
+      {{user.user_name}}
+    </h2>
+        <p class="section_title">created on: <span class="user_text">{{format_date date_created}}</span></p>
+         </div>
+         <div>
+       
+  <div class="ui red submit button" data-id="{{id}}" id="collaborate">WRK with</div>
+      {{!-- <div class="ui green submit button" data-id="{{id}}" id="collaborate">Contact Me</div> --}}
+      <button id="myBtn" class="ui green submit button">Contact Me</button>
+ 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-envelope fas-modal"></i>
+        <i class="fas fa-at fas-modal"></i>
+        <i class="fas fa-mail-bulk fas-modal"></i>
+      </div>
+      <form action="/">
+        
+        <div class="info">
+          <input class="fname" type="text" placeholder="name">
+          
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea rows="4"></textarea>
+        </div>
+<a href="mailto:{{user.email}}">
+             <h1 class="button-modal">Send</h1>
+      </a>     
+     </form>
+    </div>
+  </div>
+
+</div>
+      
+  {{!-- <div>
+    <img src="/assets/avatar/{{user.avatar}}">
+  </div> --}}
+
+  
+<h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Project details
+</h2>
+<P>{{details}}</P>
+<P> technology used: {{tech}}</P>
+
+</section>
+<section>
+  <h2 class="ui horizontal divider header">
+  <i class="fas fa-tasks"></i>
+  &nbsp Collaborators
+</h2>
+
+<div class="row">
+  {{#each collabs as |collab|}}
+  {{!-- <P> name:{{collab.user.user_name}}</P>
+  <img src="/assets/avatars/{{collab.user.avatar}}" --}}
+  
+  <img class="ui avatar image" src="/assets/avatars/{{collab.user.avatar}}">
+  <span>{{collab.user.user_name}}</span>
+  {{/each}}
+</div>
+</section>
+
+<script src="/js/collaborate.js"></script>

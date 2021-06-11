@@ -1,0 +1,73 @@
+{{>loggedInNoHero}}
+
+<section class="section is-medium">
+
+<div class="ui top attached tabular menu">
+  <a href="/profile-edit" class="item active" data-tab="first">Edit Profile</a>
+  <a href="/profile-image" class="item" data-tab="second">Edit Profile Image</a>
+</div>
+
+<div class="ui bottom attached segment">
+
+  <div class="ui attached inverted message box">
+    <div class="header">Edit Account</div>
+    <p>Upadate relevant account details below</p>
+  </div>
+  <form class="ui form attached fluid segment signUP">
+  {{!--first and last name field--}}
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input value="{{first_name}}" type="text" id="firstNameEdit">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input value="{{last_name}}" type="text" id="lastNameEdit">
+      </div>
+    </div>
+  {{!-- username and email field --}}
+    <div class="two fields">
+    <div class="field">
+      <label>Username</label>
+      <input value="{{user_name}}" type="text" id="usernameEdit">
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input value="{{email}}" type="email" id="emailEdit">
+    </div>
+    </div>
+
+
+<div class="two fields">
+  <div class="field">
+      <label>Enter New Password</label>
+      <input type="password" value="" id="PWMainEdit">
+    </div>
+    <div class="field">
+      <label>Confirm New Password</label>
+      <input type="password" value="" id="PWCheckEdit">
+    </div>
+</div>
+
+    <div class="field">
+      <label>Bio</label>
+      <textarea value="{{bio}}" id="bioEdit"></textarea>
+    </div>
+    
+  {{!-- add langauge section --}}
+    
+
+    <div class="ui red submit button" id="submitChange">Submit changes</div>
+    <a href="/profile" class="ui grey submit button mt-3">Cancel changes</a>
+  </form>
+<div class="ui bottom attached warning message">
+    <i class="fas fa-user-circle"></i>
+    &nbsp Amend profile image <a href="/editimage"><b>Click Here</b></a> instead.
+</div>
+
+</div>
+
+
+</section>
+
+<script src="/js/profile-edit.js"></script>

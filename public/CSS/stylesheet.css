@@ -1,0 +1,220 @@
+:root{
+--color1: ;
+--color2: ;
+}
+
+
+* {
+    /* all:unset; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+  }
+
+ol,
+ul {
+  list-style: none;
+}  
+
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+html.ios,
+html.ios body {
+  height: initial !important;
+}
+
+/* html {
+  background-image: url("/assets/Background-symbols.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+} */
+
+
+
+/* ==============================================
+-  Header
+============================================== */
+
+/* .header{
+    width: 100%;
+    z-index: 2;
+  } */
+
+
+  /* .navbar-brand{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  } */
+  
+  .navbar-item{
+    font-size: 1.5rem;
+  }
+  
+  .hero-body{
+    background-image: url("../../img/cover.png");
+    background-position:top;
+    background-size:cover;
+    margin-top: 70px;
+    
+    
+  }
+
+  .sticky{
+    position: fixed;
+    top: 0;
+  }
+
+  /* ==============================================
+-  Body
+============================================== */ 
+
+
+  /* .navbar{
+    background:rgb(46, 45, 45) !important;
+    transition: 0.5s ease-in;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  } */
+
+  /* .navbar-scrolled{
+    background: transparent !important;
+    transition: 0.5s ease-in;
+  } */
+  
+  /* nav {
+    background: transparent !important;
+    transition: background-color 0.4s ease-out;
+  } */
+
+  .boxBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  nav {
+    background:rgb(46, 45, 45) !important;
+    transition: 0.5s ease-in;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  }
+
+/* ==============================================
+-  Body
+============================================== */
+.homePageContainer{
+display: flex;
+/* align-items: stretch;
+flex-direction: row; */
+width: 100vw;
+}
+
+
+.signupbox, .loginbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ==============================================
+-  profile page grid
+============================================== */
+
+.gridBox{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgba(241, 240, 240, 0.288);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-height: 400px;
+  overflow: auto;
+}
+
+/* ==============================================
+-  project pages grid
+============================================== */
+
+.projecstGridBox{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background: rgba(241, 240, 240, 0.288);
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-height: 400px;
+  overflow: auto;
+}
+
+/* ==============================================
+-  image upload page
+============================================== */
+
+.uploadImage{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(241, 240, 240, 0.418);
+  border-radius: 5px;
+}
+
+.chooseFileBtn{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 5rem;
+  padding-left: 8rem;
+}
+
+
+.myProjectBtn{
+  
+  margin: 2rem;
+}
+/* ==============================================
+-  Boxs
+============================================== */
+
+
+  .signUP{
+    
+    width: 70vw;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  }
+
+  .logIn{
+    width: 70vw;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.308);
+  }
+
+
+
+  
+  /* ==============================================
+-  Footer
+============================================== */
+.footer{
+  position: relative;
+  bottom: 0;
+}
+
+#with{
+  font-style: italic;
+  color: coral;
+}
+
+
+.user_text{
+  font-style: italic;
+}
+
+.section_title{
+  font-size: 1.5rem;
+}
